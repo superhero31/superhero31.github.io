@@ -25,6 +25,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+     margin: 0;
 }
 ol, ul {
 	list-style: none;
@@ -53,7 +54,9 @@ table {
     font-style: normal;
 
 }
-
+body{
+    overflow-x: hidden; 
+}
 .header{
 	height: 125px;
 	background: #69007F;
