@@ -24,7 +24,8 @@
      session_start();
    ?>
     <?php if( isset($_SESSION['logged_user'])) : ?> -->
-    
+    Поздравляем вы успешно авторизованы!<br>
+    <hr>
    
      
      
@@ -51,10 +52,8 @@
                 </div>
                 
                 <div class="col-md-4 col-sm-4 col-xs-12 phone text-right">
-                 
-                 <a style="color:white; text-decoration: none; font-size:24px; font-family: 'UbuntuR'; padding-bottom:20px;" href="login.php">Авторизация</a><br>
-                 <a style="color:white; text-decoration: none; font-size:24px;font-family: 'UbuntuR';" href="signup.php">Регистрация</a></p>
-                 <?php endif; ?>
+                 <a href="tel:84212788037"><h3> 8 (4212) 788-037</h3></a>
+                
                  </div>
                 
             </div>
@@ -63,7 +62,7 @@
             <div class="row zagolovok text-center">
                 <h1>Европейский хостел <br>
                  </h1>
-                 <h3 style="color:white;"> Для зарегистрированных пользователей скидка 15%</h3>
+                 <h3 style="color:white;">Получите скидку 15% заполнив форму</h3>
             </div>
             <!--Конец заголовка-->
             <!--Форма-->
@@ -209,7 +208,31 @@
                 </div>
             </div>
         </div>
-       
+        <div class="container">
+        <div class="row text-center">
+                <h3 style="color:black;">Получите скидку 15% заполнив форму</h3>
+                    <div class="row foot-zagolovok">
+                        <h2>Забронируйте номер сейчас !</h2>
+                    </div>
+                    <div class="row footer-form">
+                        <form action="#">
+                            <div class="col-md-3 col-sm-3">
+                                <input type="text" placeholder="Ваше имя">
+                            </div>
+                            <div class="col-md-3 col-sm-3">
+                                <input type="text" placeholder="Ваш телефон">
+                            </div>
+                            <div class="col-md-3 col-sm-3" >
+                                <input type="email" placeholder="Ваш email">
+                            </div>
+                            <div class="col-md-3 col-sm-3">
+                                <button class="btn" type="submit">Забронировать</button>
+                            </div>
+                        </form>
+                    </div>
+                
+            </div>
+            </div> 
      </section>
      <!--Конец блока цены и товары-->
    

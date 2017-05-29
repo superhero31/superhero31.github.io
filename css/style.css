@@ -1,671 +1,391 @@
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-     margin: 0;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
+body{
+    overflow-x: hidden;
 }
 @font-face {
-    font-family: 'nautilus';
-    src: url('../fonts/nautilus/nautilus.eot');
-    src: url('../fonts/nautilus/nautilus.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/nautilus/nautilus.woff2') format('woff2'),
-         url('../fonts/nautilus/nautilus.woff') format('woff'),
-         url('../fonts/nautilus/nautilus.ttf') format('truetype'),
-         url('../fonts/nautilus/nautilus.svg#nautilus_pompiliusregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
+    font-family: 'UbuntuB';
+    src: url('../fonts/UbuntuB.eot');
+    src: url('../fonts/UbuntuB.eot') format('embedded-opentype'),
+         url('../fonts/UbuntuB.woff2') format('woff2'),
+         url('../fonts/UbuntuB.woff') format('woff'),
+         url('../fonts/UbuntuB.ttf') format('truetype'),
+         url('../fonts/UbuntuB.svg#UbuntuB') format('svg');
 }
-body{
-    overflow-x: hidden; 
+@font-face {
+    font-family: 'UbuntuM';
+    src: url('../fonts/UbuntuM.eot');
+    src: url('../fonts/UbuntuM.eot') format('embedded-opentype'),
+         url('../fonts/UbuntuM.woff2') format('woff2'),
+         url('../fonts/UbuntuM.woff') format('woff'),
+         url('../fonts/UbuntuM.ttf') format('truetype'),
+         url('../fonts/UbuntuM.svg#UbuntuM') format('svg');
 }
-.header{
-	height: 125px;
-	background: #69007F;
-}
-.wrapper{
-	width: 1200px;
-	margin: 0 auto;
-	}
-.logo{
-	padding: 5px 0px 5px 50px;
-	float: left;
-	width: 400px;
-}
-.logo>img{
-	float: left;
-	padding-right: 20px;
-}
-.logo>p{
-	padding-top: 35px;
-	font-size: 30px;
-	font-family: nautilus;
-	color: white;
-}
-.phone{
-	float: left;
-	padding-left: 80px;
-	width: 250px;
-}
-.phone>div{
-	float: left;
-	padding-top: 40px;
-    padding-right: 10px;
+@font-face {
+    font-family: 'UbuntuR';
+    src: url('../fonts/UbuntuR.eot');
+    src: url('../fonts/UbuntuR.eot') format('embedded-opentype'),
+         url('../fonts/UbuntuR.woff2') format('woff2'),
+         url('../fonts/UbuntuR.woff') format('woff'),
+         url('../fonts/UbuntuR.ttf') format('truetype'),
+         url('../fonts/UbuntuR.svg#UbuntuR') format('svg');
 }
 
-.phone>p{
-	padding-top: 45px;
-	font-size: 20px;
-	font-family: nautilus;
-	color: white;
-}
-.tel{
-	margin-top: -35px;
-}
-.location>div{
-    float: left;
-    padding-top: 35px;
-    padding-right: 10px;
-}
-.location{
-    float: left;
-    width: 350px;
-}
-.location>p{
-    padding-top: 40px;
-	font-size: 20px;
-	font-family: nautilus;
-	color: white;
-}
-.location>p+p{
-    margin-top: -25px;
-}
-/* Менюшка */
-.clearfix::after{
-	clear:both;
-	content:"";
-	height:0;
-	display:block;
-}
-.menu{
-    height: 70px;
-    background-color: #340040;
-}
-.menu>.wrapper>ul>li{
-    float:left;
-    margin-right: 80px;
-}
-.menu>.wrapper>ul{
-    padding-left: 180px;
-
-}
-    
-.menu>.wrapper>ul>li>a{
-    text-decoration:none;
-    font-family: nautilus; 
-    font-size:25px;
-	color:white;
-    display: block;
-    padding: 25px 0px 20px 0;
-    
-} 
-.menu>.wrapper>ul>li>a:hover{
-    color: #340040;
-    background-color: white;
-    border-radius: 50%;
-    font-weight: bold;
-} 
-
-
-/* Слайдер */
-.slides {
-    height:500px;
-    margin:0 auto;
-    overflow:hidden;
-    position:relative;
-    
-}
-
-.slides ul {
-    list-style:none;
-    position:relative;
-}
-
-/* Кадры анимации #anim_slides */
-@-webkit-keyframes anim_slides {
-    0% {
-        opacity:0;
-    }
-    6% {
-        opacity:1;
-    }
-    24% {
-        opacity:1;
-    }
-    30% {
-        opacity:0;
-    }
-    100% {
-        opacity:0;
-    }
-}
-@-moz-keyframes anim_slides {
-    0% {
-        opacity:0;
-    }
-    6% {
-        opacity:1;
-    }
-    24% {
-        opacity:1;
-    }
-    30% {
-        opacity:0;
-    }
-    100% {
-        opacity:0;
-    }
-}
-
-.slides ul li {
-    opacity:0;
-    position:absolute;
-    top:0;
-
-    /* анимация css3 */
-    -webkit-animation-name: anim_slides;
-    -webkit-animation-duration: 24.0s;
-    -webkit-animation-timing-function: linear;
-    -webkit-animation-iteration-count: infinite;
-    -webkit-animation-direction: normal;
-    -webkit-animation-delay: 0;
-    -webkit-animation-play-state: running;
-    -webkit-animation-fill-mode: forwards;
-
-    -moz-animation-name: anim_slides;
-    -moz-animation-duration: 24.0s;
-    -moz-animation-timing-function: linear;
-    -moz-animation-iteration-count: infinite;
-    -moz-animation-direction: normal;
-    -moz-animation-delay: 0;
-    -moz-animation-play-state: running;
-    -moz-animation-fill-mode: forwards;
-}
-
-/* Задержки css3 */
-.slides ul  li:nth-child(2), .slides ul  li:nth-child(2) div {
-    -webkit-animation-delay: 6.0s;
-    -moz-animation-delay: 6.0s;
-}
-.slides ul  li:nth-child(3), .slides ul  li:nth-child(3) div {
-    -webkit-animation-delay: 12.0s;
-    -moz-animation-delay: 12.0s;
-}
-.slides ul  li:nth-child(4), .slides ul  li:nth-child(4) div {
-    -webkit-animation-delay: 18.0s;
-    -moz-animation-delay: 18.0s;
-}
-.slides ul li img {
-    display:block;
-}
-
-/* Кадры анимации #anim_titles */
-@-webkit-keyframes anim_titles {
-    0% {
-        left:100%;
-        opacity:0;
-    }
-    5% {
-        left:10%;
-        opacity:1;
-    }
-    20% {
-        left:10%;
-        opacity:1;
-    }
-    25% {
-        left:100%;
-        opacity:0;
-    }
-    100% {
-        left:100%;
-        opacity:0;
-    }
-}
-@-moz-keyframes anim_titles {
-    0% {
-        left:100%;
-        opacity:0;
-    }
-    5% {
-        left:10%;
-        opacity:1;
-    }
-    20% {
-        left:10%;
-        opacity:1;
-    }
-    25% {
-        left:100%;
-        opacity:0;
-    }
-    100% {
-        left:100%;
-        opacity:0;
-    }
-}
-
-.slides ul li div {
-    background-color:#340040;
-    border-radius:10px 10px 10px 10px;
-    box-shadow:0 0 5px #FFFFFF inset;
-    color:#FFFFFF;
-    font-size:26px;
-    left:10%;
-    margin:0 auto;
-    padding:20px;
-    position:absolute;
-    top:50%;
-    font-family: nautilus;
+section#main{
+    padding-top: 30px;
+    height: 1000px;
+    background: url(../img/fon.jpg) center center;
    
-
-    /* Анимация css3 */
-    -webkit-animation-name: anim_titles;
-    -webkit-animation-duration: 24.0s;
-    -webkit-animation-timing-function: linear;
-    -webkit-animation-iteration-count: infinite;
-    -webkit-animation-direction: normal;
-    -webkit-animation-delay: 0;
-    -webkit-animation-play-state: running;
-    -webkit-animation-fill-mode: forwards;
-
-    -moz-animation-name: anim_titles;
-    -moz-animation-duration: 24.0s;
-    -moz-animation-timing-function: linear;
-    -moz-animation-iteration-count: infinite;
-    -moz-animation-direction: normal;
-    -moz-animation-delay: 0;
-    -moz-animation-play-state: running;
-    -moz-animation-fill-mode: forwards;
 }
-/* Блок "Почему мы лучшие?"*/
-.povar{
-    height: 632px;
-    background-color:#9d00bf;
+.phone>a>h3{
+    color: white;
+    font-family: 'UbuntuM';
 }
-.img_povar{
-    float:left;
+.phone>a{
+    color: red;
+    font-family: 'UbuntuM';
 }
-.text_block{
-    float:left;
-    width: 650px;
-}
-.zagolovok{
-    font-family: nautilus;
-    color:white;
-    font-size:60px;
-    width: 300px;
-    padding: 30px 0 20px 180px;
-}
-.text{
-    padding-left: 50px;
-    font-family: nautilus;
-    color:white;
-    font-size:25px;
-    line-height: 35px;
-}
-a.button {
-  display: inline-block;
-  font-family: nautilus;
-    font-weight: 700;
-  font-size:40px;
-  color:white;
-  margin: 20px 0 0 150px;
-  text-decoration: none;
-  user-select: none;
-  padding: .5em 2em;
-  outline: none;
-  border: 3px solid white;
-  border-radius: 10px;
-  transition: 0.5s;
-} 
-a.button:hover { background: rgba(255,255,255,.2); }
-a.button:active {
-    border: 3px solid #340040;
-    background: white;
-    color: #340040;
-}
-/* Блок Продукция "Мы производим"*/
-.prod{
-    height: 1080px;
-    background: #340040;
-}
-.prod>.wrapper>p{
-    padding: 40px 0 0 450px;
-    color:#FFFFFF;
-    font-size:45px;
-    font-family: nautilus;
-}
-.block_odin{
-    margin-top: 30px;
-    float: left;
-}
-.pechenie{
-    float: left;
-    width: 400px;
-}
-.rulet{
-    float: left;
-    width: 400px;
-}
-.piroznie{
-    float: left;
-    width: 400px;
-}
-.block_odin p {
-    padding: 20px 0 0 120px;
-    color:#FFFFFF;
-    font-size:40px;
-    font-family: nautilus;
-}
-.block_dva{
-    float: left;
-    margin-top: 30px;
-}
-.block_dva p {
-    padding: 20px 0 0 120px;
-    color:#FFFFFF;
-    font-size:40px;
-    font-family: nautilus;
-}
-.sloiki{
-    float: left;
-    width: 400px; 
-}
-.tort{
-    float: left;
-    width: 400px; 
-}
-.raznaya{
-    float: left;
-    width: 400px; 
-}
-.raznaya>p{
-    margin-left: -120px;
-     text-align:  center;
-}
-.pred{
-    height: 500px;
-    background: #69007f;
-}
-.pred>.wrapper>p{
-    padding: 40px 0 0 450px;
-    color:#FFFFFF;
-    font-size:45px;
-    font-family: nautilus;
-}
-.pred_block{
-    margin-top: 70px;
-    float: left;
-}
-.glaz{
-    width: 400px;
-    float: left;
-}
-.glaz>div{
-    float: left;
-    margin-right: 20px;
-}
-.glaz>p{
-    color:#FFFFFF;
-    font-size:22px;
-    font-family: nautilus;
-}
-.glaz>p+p{
-    font-size:18px;
-    padding-top: 10px;
-}
-.calendar{
-    width: 400px;
-    float: left;
-}
-.calendar>div{
-    float: left;
-    padding-right: 20px;
-    padding-left: 40px;
-}
-.calendar>p{
-    color:#FFFFFF;
-    font-size:22px;
-    font-family: nautilus;
-}
-.calendar>p+p{
-    font-size:18px;
-    padding-top: 10px;
+.phone>p{
+    color: white;
+    font-family: 'UbuntuR';
+    text-decoration: none;
 }
 
-.mashinka{
-    width: 400px;
-    float: left;
-}
-.mashinka>div{
-    float: left;
-    padding-right: 20px;
-    padding-left: 20px;
-}
-.mashinka>p{
-    color:#FFFFFF;
-    font-size:22px;
-    font-family: nautilus;
-}
-.mashinka>p+p{
-    font-size:18px;
-    padding-top: 10px;
-}
-.pred_block_dva{
-    margin-top: 50px;
-    float: left;
-}
-.ludi{
-    width: 400px;
-    float: left;
-}
-.ludi>div{
-    float: left;
-    margin-right: 20px;
-}
-.ludi>p{
-    color:#FFFFFF;
-    font-size:22px;
-    font-family: nautilus;
-}
-.ludi>p+p{
-    font-size:18px;
-    padding-top: 10px;
-}
-.chashka{
-    width: 400px;
-    float: left;
-}
-.chashka>div{
-    float: left;
-    padding-right: 20px;
-    padding-left: 40px;
-}
-.chashka>p{
-    color:#FFFFFF;
-    font-size:22px;
-    font-family: nautilus;
-}
-.chashka>p+p{
-    font-size:18px;
-    padding-top: 10px;
-}
-.korobka{
-    width: 400px;
-    float: left;
-}
-.korobka>div{
-    float: left;
-    padding-right: 20px;
-    padding-left: 20px;
-}
-.korobka>p{
-    color:#FFFFFF;
-    font-size:22px;
-    font-family: nautilus;
-}
-.korobka>p+p{
-    font-size:18px;
-    padding-top: 10px;
-}
-/* Footer Контакты*/
-#footer{
-    height: 350px;
-    background: #340040;
-}
-.contacts{
-    color:#FFFFFF;
-    font-size:22px;
-    font-family: nautilus;
-    width: 400px;
-    float: left;
-}
-.adresa{
-    padding: 40px 0 30px 40px;
-    font-size:40px;
-}
-.ppp{
-    padding-left: 50px;
-}
-.email{
-    font-size:40px;
-    padding: 60px 0 30px 150px;
-}
-.mail{
-    padding-left:   100px;
-}
-.telephone{
-    margin-left: 50px;
-    width: 300px;
-    float: left;
-}
-.tele{
-    color:#FFFFFF;
-    font-size:40px;
-    font-family: nautilus;
-    padding: 40px 0 30px 40px;
-}
-.telephone>p+p {
-    padding-left: 55px;
-    color:#FFFFFF;
-    font-size:22px;
-    font-family: nautilus;
-    line-height: 30px;
-}
-.socseti{
-    float: left;
-    width: 450px;
-}
-.soc{
-    color:#FFFFFF;
-    font-size:40px;
-    font-family: nautilus;
-    padding: 40px 0 30px 150px;
-}
-.soc_menu{
-	float: left;
-    margin-top:50px;
-    margin-left: 50px;
-}
-.soc_menu li{
-    
-    display: inline-block;
-}
-.soc_menu li a{
-    background: url('../images/sprite.png') 0 0 no-repeat;
-    padding: 35px 45px;
-}
 
-.soc_menu .vk a{
-background-position: 0 0;
+.soc_seti{
+    padding-top: 20px;
 }
-
-.soc_menu .vk:hover a{
-background-position: 0 -90px;
+.zagolovok>h1{
+    color: white;
+    font-family: 'UbuntuB';
+    margin-top: 100px;
+    text-transform: uppercase;
 }
-
-.soc_menu .facebook a{
-background-position: -111px 0;
+.head-zagolovok>h2{
+    color: #a60436;
+    font-family: 'UbuntuB';
 }
-
-.soc_menu .facebook:hover a{
-background-position: -111px -90px;
-}
-
-.soc_menu .twitter a{
-background-position: -222px 0;
-}
-
-.soc_menu .twitter:hover a{
-background-position: -222px -90px;
-}
-.soc_menu .mayl a{
-background-position: -334px 0;
-}
-
-.soc_menu .mayl:hover a{
-background-position: -334px -90px;
-}
-/* Карта */
-.mymap {
-    height: 400px;
-}
-.map_red{
-    color: #340040;
-    font-size: 18px;
-}
-.map_pic{
-    width: 40px;
-    height: 30px;
-    vertical-align: middle;
+.main-form{
+    background-color: rgba(255,255,255,0.45);
+    padding-bottom: 40px;
+    margin-top: 80px;
     
 }
+.main-form input{
+    width: 80%;
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-family: 'UbuntuR';
+}
+.btn{
+    color: white;
+    background-color: #a60436;
+    border: none;
+    border-radius: 5px;
+    border-bottom: 3px solid #420001;
+    border-right: 3px solid #420001;
+    margin-top: 15px;
+    padding: 10px 40px;
+    font-family: 'UbuntuR';
+    font-size: 16px;
+}
+.btn:hover{
+    color: white;
+    background-color: #a4254c;
+   
+}
+.btn:focus{
+    color: white;
+    background-color: #f70011;
+     }
+#ikonki{
+    padding-top: 2%;
+}
+.zagolovok_ikonki{
+    font-family: 'UbuntuB';
+    color: #363636;
+}
+.icons img{
+    width: 150px;
+}
+.icons{
+    margin-top: 2%;
+}
+.icons h4{
+    padding-top: 25px;
+    font-family: 'UbuntuM';
+    color: #a60436;
+}
+.zagolovok_price{
+    margin-bottom: 2%;
+    font-family: 'UbuntuB';
+}
+.card>h3{
+    font-family: 'UbuntuB';
+}
+
+.card{
+    border: 5px solid #a60436;
+    border-radius: 5px;
+    padding-bottom: 20px;
+}
+#price{
+    padding-bottom: 2%;
+}
+.card button{
+    color: white;
+    background-color: #a60436;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 40px;
+    font-family: 'UbuntuM';
+}
+.card ul>li{
+    font-family: 'UbuntuM';
+}
+.card h4{
+    font-family: 'UbuntuB';
+}
+.kvartiri{
+    margin-bottom: 2%;
+}
+.footer-form input{
+    width: 80%;
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid #a60436 ;
+    font-family: 'UbuntuR';
+}
+.foot-zagolovok{
+    font-family: 'UbuntuB';
+    color: #393939;
+    
+}
+::-webkit-input-placeholder { color: #a60436; }
+::-moz-placeholder          { color: #a60436; } /* Firefox 19+ */
+:-moz-placeholder           { color: #a60436; } /* Firefox 18- */
+:-ms-input-placeholder      { color: #a60436; }
+   
+@media (min-width:0px) and (max-width:320px){
+    .logo img{
+        width: 100px;
+    }
+    .logo{
+        text-align: center;
+    }
+    .soc_seti img{
+        width: 20px;
+    }
+    .logorevizor img{
+        
+        width: 100px;
+    }
+     .phone{
+        text-align: center;
+    }
+    .zagolovok>h1{
+        font-size: 18px;
+        margin-top: 20px;
+        margin-bottom: 40px;
+    }
+    .main-form h2{
+        font-size: 16px;
+    }
+    .main-form{
+        margin: 5px;
+    }
+    section#main{
+        height: 650px;
+    }
+    .zagolovok_ikonki h2{
+      font-size: 16px;  
+    }
+    .icons h4{
+        font-size: 16px;
+        padding-top: 0px;
+        margin-bottom: 15px;
+    }
+    .zagolovok_price h2{
+        font-size: 18px;  
+    }
+    .card h3{
+        font-size: 16px;  
+    }
+    .card h4{
+        font-size: 14px;  
+    }
+    .card{
+        margin-bottom: 20px;
+    }
+    .card img{
+        width: 90%;
+    }
+    .foot-zagolovok h2{
+        font-size: 17px;  
+    }
+}
+@media (min-width:321px) and (max-width:480px){
+    .logo img{
+        width: 130px;
+    }
+    .logo{
+        text-align: center;
+    }
+    .soc_seti img{
+        width: 25px;
+    }
+    .logorevizor img{
+        
+        width: 130px;
+    }
+     .phone{
+        text-align: center;
+    }
+    .zagolovok>h1{
+        font-size: 22px;
+        margin-top: 20px;
+        margin-bottom: 40px;
+    }
+    .main-form h2{
+        font-size: 20px;
+    }
+    .main-form{
+        margin: 5px;
+    }
+    section#main{
+        height: 750px;
+    }
+    .zagolovok_ikonki h2{
+      font-size: 20px;  
+    }
+    .icons img{
+        margin-bottom: 10px;
+    }
+    .icons h4{
+        font-size: 18px;
+        padding-top: 0px;
+        margin-bottom: 15px;
+    }
+    .zagolovok_price h2{
+        font-size: 22px;  
+    }
+    .card h3{
+        font-size: 18px;  
+    }
+    .card h4{
+        font-size: 16px;  
+    }
+    .card{
+        margin-bottom: 20px;
+    }
+    .card img{
+        width: 95%;
+    }
+    .foot-zagolovok h2{
+        font-size: 20px;  
+    }
+}
+@media (min-width:481px) and (max-width:768px) {
+    .logo img{
+        width: 160px;
+    }
+    .logo{
+        text-align: center;
+    }
+    .soc_seti img{
+        width: 30px;
+    }
+    .logorevizor img{
+        
+        width: 180px;
+    }
+     .phone{
+        text-align: center;
+    }
+    .zagolovok>h1{
+        font-size: 26px;
+        margin-top: 20px;
+        margin-bottom: 40px;
+    }
+    .main-form h2{
+        font-size: 24px;
+    }
+    .main-form{
+        margin: 5px;
+    }
+    section#main{
+        height: 750px;
+    }
+    .zagolovok_ikonki h2{
+      font-size: 22px;  
+    }
+    .icons img{
+        margin-bottom: 10px;
+    }
+    .icons h4{
+        font-size: 20px;
+        padding-top: 0px;
+        margin-bottom: 15px;
+    }
+    .zagolovok_price h2{
+        font-size: 24px;  
+    }
+    .card h3{
+        font-size: 20px;  
+    }
+    .card h4{
+        font-size: 18px;  
+    }
+    .card{
+        margin-bottom: 20px;
+    }
+    .card img{
+        width: 100%;
+    }
+    .foot-zagolovok h2{
+        font-size: 22px;  
+    }
+}
+@media (min-width:769px) and (max-width:992px){
+    .card{
+        margin-bottom: 20px;
+    }
+    .card h3{
+        font-size: 22px;  
+    }
+    .logo img{
+        width: 180px;
+    }
+    .logo{
+        text-align: center;
+    }
+    .soc_seti img{
+        width: 40px;
+    }
+    .logorevizor img{
+        
+        width: 200px;
+    }
+    .btn{
+        padding: 8px 15px;
+    }
+    section#main{
+        height:800px;
+    }
+    .card img{
+        width: 100%;
+    }
+}
+@media (min-width:993px) and (max-width:1200px){
+    .card img{
+        width: 100%;
+    }
+    .card h3{
+        font-size: 22px;  
+    }
+    section#main{
+        height:900px;
+    }
+}
+
